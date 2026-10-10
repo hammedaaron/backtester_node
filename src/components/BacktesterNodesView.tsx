@@ -26,6 +26,7 @@ import { ResetConfirmModal } from './ResetConfirmModal';
 import { GoalSettingsModal } from './GoalSettingsModal';
 import { AccountManagerModal } from './AccountManagerModal';
 import { SessionJournalModal } from './SessionJournalModal';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface BacktesterNodesViewProps {
   onClose?: () => void;
@@ -330,8 +331,11 @@ export const BacktesterNodesView: React.FC<BacktesterNodesViewProps> = ({
           </div>
         </div>
 
-        {/* Right: User Profile, Session Journal Button next to Close button */}
-        <div className="flex items-center gap-2">
+        {/* Right: PWA Install, User Profile, Session Journal Button next to Close button */}
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          {/* PWA In-App Install Button */}
+          <PWAInstallButton />
+
           {/* User profile trigger */}
           <button
             type="button"

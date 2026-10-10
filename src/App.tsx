@@ -16,6 +16,7 @@ import {
 import { BacktesterNodesView } from './components/BacktesterNodesView';
 import { StrategyLabView } from './components/StrategyLabView';
 import { AnalyticsView } from './components/AnalyticsView';
+import { PWAInstallButton } from './components/PWAInstallButton';
 import { loadBacktesterState, getActiveUserId } from './utils/storage';
 import { getProgressHexColor } from './utils/colors';
 
@@ -105,18 +106,21 @@ export default function App() {
               </nav>
             </div>
 
-            {/* Re-open feature shortcut */}
-            <button
-              type="button"
-              onClick={() => {
-                setActiveTab('nodes');
-                setIsNodesPaneOpen(true);
-              }}
-              className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
-            >
-              <Maximize2 className="w-3.5 h-3.5" />
-              <span>Launch Nodes Grid</span>
-            </button>
+            {/* Right actions: PWA Install and Launch Grid */}
+            <div className="flex items-center gap-2">
+              <PWAInstallButton />
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('nodes');
+                  setIsNodesPaneOpen(true);
+                }}
+                className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
+              >
+                <Maximize2 className="w-3.5 h-3.5" />
+                <span>Launch Nodes Grid</span>
+              </button>
+            </div>
           </header>
 
           {/* Active Tab Content */}
