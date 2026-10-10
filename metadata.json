@@ -1,0 +1,6 @@
+{
+  "name": "Backtester Nodes",
+  "description": "Mobile-first sequential tracker for completed backtesting trades and strategy sequences with persistent 100-node grids and goal progression.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
